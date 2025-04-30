@@ -14,6 +14,6 @@ public class Lab014_Palindrome {
         }
         System.out.printf("The palindrome of the input %s is ", input);
         System.out.println(output);
-
+        sc.close();
     }
 }

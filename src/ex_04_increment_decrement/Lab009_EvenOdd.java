@@ -8,5 +8,6 @@ public class Lab009_EvenOdd {
         int no = sc.nextInt();
         String result = no%2==0 ? "Even" : "Odd";
         System.out.printf("%d is %s", no, result);
+        sc.close();
     }
 }

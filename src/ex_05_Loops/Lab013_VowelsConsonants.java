@@ -24,5 +24,6 @@ public class Lab013_VowelsConsonants {
         }
         System.out.printf("The input string %s has %d vowels and %d consonants",
                 input, vowels, consonants);
+                sc.close();
     }
 }

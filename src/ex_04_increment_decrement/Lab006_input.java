@@ -11,5 +11,6 @@ public class Lab006_input {
         System.out.printf("Name is %s\n", name);
         System.out.printf("Age is %d\n", age);
         System.out.printf("Salary is %.2f", salary);
+        sc.close();
     }
 }

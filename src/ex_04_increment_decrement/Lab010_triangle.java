@@ -17,5 +17,6 @@ public class Lab010_triangle {
             result = "scalene";
         System.out.printf("The sides of the triangle are %d, %d and %d\n", x, y, z);
         System.out.println("It is an " + result + " triangle.");
+        sc.close();
     }
 }

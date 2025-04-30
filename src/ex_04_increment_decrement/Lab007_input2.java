@@ -9,5 +9,6 @@ public class Lab007_input2 {
         int b = sc.nextInt();
         int result = a > b ? a : b;
         System.out.printf("Maximum among %d and %d is %d", a, b, result);
+        sc.close();
     }
 }
