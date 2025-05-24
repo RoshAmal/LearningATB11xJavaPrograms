@@ -1,79 +1,52 @@
 package ex_12_OOPS5;
-
-public class Lab046_Super{
-    public static void main(String[] args){
-        
+public class Lab046_Super {
+    public static void main(String[] args) {
+        Sofa s1 = new Sofa("green", 3, 2);
+        Shelf s2 = new Shelf("wood", 4, 5000);
+        // Accessing superclass methods and fields initialized via super()
+        System.out.printf("Color of the %s is %s with %d cushions\n", 
+            s1.getName(), s1.getColor(), s1.getCushions());
+        System.out.printf("The %s made of %s with %d rows costs Rs %d\n", 
+            s2.getName(), s2.getMaterial(), s2.getRows(), s2.getMrp());
     }
 }
-
-class furniture{
-    private int mrp;
+class Furniture {
+    // Common fields shared by all furniture
     private String name;
-    private String material;
     private String color;
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
+    protected String material;
+    private int mrp;
+    // Constructor to initialize all shared fields
+    public Furniture(String name, String color, String material, int mrp) {
         this.name = name;
-    }
-    public String getMaterial() {
-        return material;
-    }
-    public void setMaterial(String material) {
-        this.material = material;
-    }
-    public String getColor() {
-        return color;
-    }
-    public void setColor(String color) {
         this.color = color;
-    }
-    public int getMrp(){
-        return mrp;
-    }
-    public void setMrp(int mrp){
+        this.material = material;
         this.mrp = mrp;
     }
+    // Getter methods to access private members
+    public String getName() { return name; }
+    public String getColor() { return color; }
+    public String getMaterial() { return material; }
+    public int getMrp() { return mrp; }
 }
-
-class sofa extends furniture{
+class Sofa extends Furniture {
     private int capacity;
     private int cushions;
-    public int getCushions() {
-        return cushions;
-    }
-    public void setCushions(int cushions) {
+    // Constructor uses super() to avoid field shadowing and redundant initialization
+    public Sofa(String color, int capacity, int cushions) {
+        super("Sofa", color, "leather", 8000); // Initializes name, color, material, mrp
+        this.capacity = capacity;
         this.cushions = cushions;
     }
-    public int getCapacity() {
-        return capacity;
-    }
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
-    }
+    public int getCapacity() { return capacity; }
+    public int getCushions() { return cushions; }
 }
-
-class shelf extends furniture{
-    private float length;
-    private float breadth;
+class Shelf extends Furniture {
     private int rows;
-    public int getRows() {
-        return rows;
-    }
-    public void setRows(int rows) {
+    // Constructor also uses super() to set common fields without repeating them here
+    public Shelf(String material, int rows, int mrp) {
+        super("Shelf", "brown", material, mrp);
         this.rows = rows;
     }
-    public float getLength() {
-        return length;
-    }
-    public void setLength(float length) {
-        this.length = length;
-    }
-    public float getBreadth() {
-        return breadth;
-    }
-    public void setBreadth(float breadth) {
-        this.breadth = breadth;
-    }
+    public int getRows() { return rows; }
 }
