@@ -8,7 +8,9 @@ public class Lab047_Super2 {
 }
 class Person{
     protected String name;
+    @SuppressWarnings("unused")
     private int height;
+    @SuppressWarnings("unused")
     private String sex;
     protected int age;
     public Person(String name, int height, String sex, int age){
@@ -29,6 +31,7 @@ class Employee extends Person{
     public String getOfficeAddress() {
         return officeAddress;
     }
+    @SuppressWarnings("unused")
     private String employeeID;
     public Employee(String name, int height, String sex, int age, String officeAddress, String employeeID){
         super(name, height, sex, age);
