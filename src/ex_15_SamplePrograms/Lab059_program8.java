@@ -1,6 +1,6 @@
 package ex_15_SamplePrograms;
 
-public class Lab052_program8 {
+public class Lab059_program8 {
     public static void main(String[] args){
         String hello = "Java";
         int i=0;

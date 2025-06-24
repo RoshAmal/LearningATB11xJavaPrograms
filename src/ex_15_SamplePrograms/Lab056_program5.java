@@ -1,14 +1,12 @@
 package ex_15_SamplePrograms;
 
-public class Lab052_program10 {
+public class Lab056_program5 {
     public static void main(String[] args){
-        int i=1;
         int ten = 10;
-        int num = 7;
+        int num = 5;
         System.out.printf("\nPrinting the multiplication table of %d", num);
-        while (i <= ten){
+        for (int i=1; i <= ten; i++){
             System.out.printf("\n%d x %d = %d", i, num, i*num);
-            i++;
         }
         System.out.println("");
     }

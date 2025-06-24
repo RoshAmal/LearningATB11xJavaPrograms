@@ -1,6 +1,6 @@
 package ex_15_SamplePrograms;
 
-public class Lab052_program3 {
+public class Lab054_program3 {
     public static void main(String[] args){
         String hello = "Hello";
         int n = 5;
